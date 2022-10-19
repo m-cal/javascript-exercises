@@ -1,4 +1,7 @@
 const repeatString = function(str, n) {
+  if (n < 0) {
+    return 'ERROR';
+  }
   let toReturn = '';
   for (i = 0; i < n; i++) {
     toReturn += str;
