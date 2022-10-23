@@ -32,12 +32,22 @@ const multiply = function(numArr) {
   return total;
 };
 
-const power = function() {
-	
+const power = function(a, b) {
+	return a**b;
 };
 
-const factorial = function() {
-	
+const factorial = function(num) {
+  if (num == 0 || num == 1) {
+    return 1;
+  } else if (num == 2 ) {
+    return 2;
+  } else {
+    let total = num;
+    for (let mult = num-1; mult >= 2; mult--) {
+      total *= mult;
+    }
+    return total;
+  }
 };
 
 // Do not edit below this line
