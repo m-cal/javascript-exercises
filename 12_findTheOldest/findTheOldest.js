@@ -8,13 +8,6 @@ const findTheOldest = function(people) {
       ages.push(people[person].yearOfDeath - people[person].yearOfBirth);
     }
   }
-  console.log(ages);
-  ages.forEach(age => {
-    if (typeof age != 'number') {
-      ages.splice(age, 1);
-    }
-  });
-  console.log(ages);
   const agesArr =  ages.sort((a, b) => {return a - b});
   const oldest = agesArr.reverse()[0];
   const oldestPerson = people.find((person) => {
